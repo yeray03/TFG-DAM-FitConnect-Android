@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:fillViewport="true"
+    android:padding="24dp"
+    tools:context=".home">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvHomeTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Hoy toca: ESPALDA"
+            android:textColor="#212121"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHomeSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Calendario de entrenos"
+            android:textColor="#616161"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHomeTitle" />
+
+        <LinearLayout
+            android:id="@+id/cardCalendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHomeSubtitle">
+
+            <TextView
+                android:id="@+id/tvMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mayo"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:id="@+id/gridWeekHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:columnCount="7"
+                android:rowCount="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:text="L"
+                    android:textColor="#757575"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:text="M"
+                    android:textColor="#757575"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:text="X"
+                    android:textColor="#757575"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:text="J"
+                    android:textColor="#757575"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:text="V"
+                    android:textColor="#757575"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:text="S"
+                    android:textColor="#757575"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:text="D"
+                    android:textColor="#757575"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/gridCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:alignmentMode="alignMargins"
+                android:columnCount="7"
+                android:rowCount="5"
+                android:useDefaultMargins="true">
+
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#BBDEFB" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="1\nPecho" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#C8E6C9" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="2\nPierna" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#FFE0B2" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="3\nEspalda" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#E1BEE7" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="4\nHombro" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#FFF9C4" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="5\nBíceps" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#FFCDD2" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="6\nTríceps" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#B2EBF2" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="7\nCore" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#D7CCC8" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="8\nCardio" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#BBDEFB" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="9\nPecho" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#C8E6C9" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="10\nPierna" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#FFE0B2" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="11\nEspalda" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#E1BEE7" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="12\nHombro" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#B2EBF2" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="13\nCore" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#E0E0E0" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="14\nDescanso" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#FFCDD2" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="15\nTríceps" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#FFF9C4" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="16\nBíceps" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#BBDEFB" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="17\nPecho" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#C8E6C9" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="18\nPierna" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#FFE0B2" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="19\nEspalda" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#D7CCC8" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="20\nCardio" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#E0E0E0" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="21\nDescanso" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#E1BEE7" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="22\nHombro" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#B2EBF2" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="23\nCore" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#BBDEFB" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="24\nPecho" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#C8E6C9" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="25\nPierna" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#FFE0B2" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="26\nEspalda" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#FFF9C4" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="27\nBíceps" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#FFCDD2" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="28\nTríceps" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#D7CCC8" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="29\nCardio" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#B2EBF2" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="30\nCore" android:textColor="#212121" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:background="@android:drawable/edit_text" android:backgroundTint="#E0E0E0" android:gravity="center" android:padding="6dp" android:minHeight="76dp" android:includeFontPadding="false" android:lineSpacingExtra="1dp" android:maxLines="2" android:ellipsize="end" android:text="31\nDescanso" android:textColor="#212121" android:textSize="12sp" />
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/tvLegendTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Leyenda"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:id="@+id/gridLegend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:columnCount="3"
+                android:useDefaultMargins="true">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_columnWeight="1" android:gravity="center_vertical"
+                    android:orientation="horizontal" android:padding="4dp">
+                    <TextView android:layout_width="16dp" android:layout_height="16dp"
+                        android:background="#BBDEFB" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp" android:text="Pecho"
+                        android:textColor="#616161" android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_columnWeight="1" android:gravity="center_vertical"
+                    android:orientation="horizontal" android:padding="4dp">
+                    <TextView android:layout_width="16dp" android:layout_height="16dp"
+                        android:background="#FFE0B2" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp" android:text="Espalda"
+                        android:textColor="#616161" android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_columnWeight="1" android:gravity="center_vertical"
+                    android:orientation="horizontal" android:padding="4dp">
+                    <TextView android:layout_width="16dp" android:layout_height="16dp"
+                        android:background="#C8E6C9" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp" android:text="Pierna"
+                        android:textColor="#616161" android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_columnWeight="1" android:gravity="center_vertical"
+                    android:orientation="horizontal" android:padding="4dp">
+                    <TextView android:layout_width="16dp" android:layout_height="16dp"
+                        android:background="#E1BEE7" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp" android:text="Hombro"
+                        android:textColor="#616161" android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_columnWeight="1" android:gravity="center_vertical"
+                    android:orientation="horizontal" android:padding="4dp">
+                    <TextView android:layout_width="16dp" android:layout_height="16dp"
+                        android:background="#FFF9C4" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp" android:text="Bíceps"
+                        android:textColor="#616161" android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_columnWeight="1" android:gravity="center_vertical"
+                    android:orientation="horizontal" android:padding="4dp">
+                    <TextView android:layout_width="16dp" android:layout_height="16dp"
+                        android:background="#FFCDD2" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp" android:text="Tríceps"
+                        android:textColor="#616161" android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_columnWeight="1" android:gravity="center_vertical"
+                    android:orientation="horizontal" android:padding="4dp">
+                    <TextView android:layout_width="16dp" android:layout_height="16dp"
+                        android:background="#B2EBF2" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp" android:text="Core"
+                        android:textColor="#616161" android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_columnWeight="1" android:gravity="center_vertical"
+                    android:orientation="horizontal" android:padding="4dp">
+                    <TextView android:layout_width="16dp" android:layout_height="16dp"
+                        android:background="#D7CCC8" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp" android:text="Cardio"
+                        android:textColor="#616161" android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_columnWeight="1" android:gravity="center_vertical"
+                    android:orientation="horizontal" android:padding="4dp">
+                    <TextView android:layout_width="16dp" android:layout_height="16dp"
+                        android:background="#E0E0E0" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp" android:text="Descanso"
+                        android:textColor="#616161" android:textSize="12sp" />
+                </LinearLayout>
+
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/tvLegendNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="La escala de color indica el tipo de entreno asignado a cada día."
+                android:textColor="#616161"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

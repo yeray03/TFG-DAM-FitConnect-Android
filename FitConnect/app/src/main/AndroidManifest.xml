@@ -12,6 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitConnect">
         <activity
+            android:name=".rutina"
+            android:exported="false" />
+        <activity
+            android:name=".chat"
+            android:exported="false" />
+        <activity
+            android:name=".calendarioRutina"
+            android:exported="false" />
+        <activity
+            android:name=".sendCode"
+            android:exported="false" />
+        <activity
+            android:name=".formRegister"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
